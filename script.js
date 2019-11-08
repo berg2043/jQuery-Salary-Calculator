@@ -4,13 +4,18 @@ function onReady(){
   console.log('JQ');
 }
 
-// Gets the form info
+// Gets the form info and clears the forms
 function getInfo(){
   let fName = $('#first-name-input').val();
   let lName =$('#last-name-input').val();
   let idNumber = $('#id-input').val();
   let titles = $('#title-input').val();
   let salary = $('#salary-input').val();
+  $('#first-name-input').val('');
+  $('#last-name-input').val('');
+  $('#id-input').val('');
+  $('#title-input').val('');
+  $('#salary-input').val('');
   let employee = {fName, lName, idNumber, titles, salary};
   return employee;
 }
