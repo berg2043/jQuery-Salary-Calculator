@@ -47,11 +47,21 @@ function pushToTable(employee){
   `);
 }
 
+// Updates salary
+function totalSalaryCalc(){
+  let totalSalary = 0
+  for(let employee of employeeList){
+    totalSalary += employee.salary;
+  }
+  $('#total').text(totalSalary);
+}
+
 // Combines functionality into the submit button
 function clickSubmit(){
   let newEmployee = getInfo();
   salaryCollector(newEmployee);
   pushToTable(newEmployee);
+  totalSalaryCalc();
 }
 // A 'Submit' button should collect the form information, store the information to 
 // calculate monthly costs, append information to the DOM and clear the input 
