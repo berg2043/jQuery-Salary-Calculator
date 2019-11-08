@@ -14,6 +14,13 @@ function getInfo(){
   let employee = {fName, lName, idNumber, title, salary};
   return employee;
 }
+
+function salaryCollector(employee){
+  employeeList.push({
+    employee.name,
+    employee.salary
+  })
+}
 // A 'Submit' button should collect the form information, store the information to 
 // calculate monthly costs, append information to the DOM and clear the input 
 // fields. Using the stored information, calculate monthly costs and append this 
