@@ -42,7 +42,7 @@ function pushToTable(employee){
       <td class="id-number">${employee.idNumber}</td>
       <td>${employee.titles}</td>
       <td>$${employee.salary}</td>
-      <td><button class="delete-button btn btn-dark">Delete</button></td>
+      <td><button class="delete-button btn btn-light">Delete</button></td>
     </tr>
   `);
 }
