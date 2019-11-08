@@ -76,7 +76,9 @@ function clickSubmit(event){
     $('#salary-input').val() === ''
   ){
     $('#error-message').text('Please fill out all forms.');
-  } else{
+  } else if (employeeList.some(e => e.idNumber === $('#id-input').val())){
+    $('#error-message').text('Please use a unique ID number.');
+  } else {
     let newEmployee = getInfo();
     salaryCollector(newEmployee);
     pushToTable(newEmployee);
