@@ -10,7 +10,11 @@ header{
 
 table{
   width: 800px;
+  border: 1px solid;
 }
 th{
-  width: 20%;
+  width: 23.75%;
+}
+th.id{
+  width: 5%
 }
