@@ -8,7 +8,7 @@ header{
   text-align: center;
 }
 
-table{
+/* table{
   width: 800px;
   border: 1px solid;
 }
@@ -17,7 +17,7 @@ th{
 }
 th.id{
   width: 5%
-}
+} */
 
 .red{
   background-color: red;
