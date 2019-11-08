@@ -56,7 +56,8 @@ function totalSalaryCalc(){
 }
 
 // Combines functionality into the submit button
-function clickSubmit(){
+function clickSubmit(event){
+  event.preventDefault();
   let newEmployee = getInfo();
   salaryCollector(newEmployee);
   pushToTable(newEmployee);
