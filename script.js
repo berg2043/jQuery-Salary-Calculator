@@ -39,7 +39,7 @@ function pushToTable(employee){
     <tr>
       <td>${employee.fName}</td>
       <td>${employee.lName}</td>
-      <td>${employee.idNumber}</td>
+      <td class="id-number">${employee.idNumber}</td>
       <td>${employee.titles}</td>
       <td>$${employee.salary}</td>
       <td><button class="delete-button">Delete</button></td>
@@ -76,15 +76,13 @@ function clickSubmit(event){
 
 // Deletes row that data belongs to
 function deleteButton(){
-  //  removeFromArray(this);
+  removeFromArray(this);
   $(this).parent().parent().remove();
+  totalSalaryCalc();
 }
 
-
-
-// Add styling or extra functionality that fits with the theme of this assignment.
-
-// Once the employee is deleted, update the total spend on salaries account for 
-// this employee's removal. This will require that the logic knows which element 
-// was removed. You will need to use .text() as a getter or look into jQuery's 
-// .data() function. This is tricky!
+// Removes employee from the total salary pool
+function removeFromArray(target){
+  let targetEmployee = $(target).parent().parent().children('.id-number').text();
+  employeeList = employeeList.filter( employee => employee.idNumber !== targetEmployee);
+}
