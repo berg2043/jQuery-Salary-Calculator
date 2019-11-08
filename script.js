@@ -3,6 +3,7 @@ $(onReady);
 // Jquery start function
 function onReady(){
   $('#submit-button').on('click', clickSubmit);
+  $('#employee-table').on('click','.delete-button', deleteButton);
 }
 
 // Declaring the list
@@ -73,8 +74,13 @@ function clickSubmit(event){
   totalSalaryCalc();
 }
 
-// Create a delete button that removes an employee from the DOM. For Base mode, it 
-// does not need to remove that Employee's salary from the reported total.
+// Deletes row that data belongs to
+function deleteButton(){
+  //  removeFromArray(this);
+  $(this).parent().parent().remove();
+}
+
+
 
 // Add styling or extra functionality that fits with the theme of this assignment.
 
