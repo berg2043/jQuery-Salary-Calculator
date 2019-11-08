@@ -18,3 +18,7 @@ th{
 th.id{
   width: 5%
 }
+
+.red{
+  background-color: red;
+}
