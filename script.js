@@ -4,8 +4,15 @@ function onReady(){
   console.log('JQ');
 }
 
+// Gets the form info
 function getInfo(){
-  let 
+  let fName = $('#first-name-input').val();
+  let lName =$('#last-name-input').val();
+  let idNumber = $('#id-input').val();
+  let title = $('#title-input').val();
+  let salary = $('#salary-input').val();
+  let employee = {fName, lName, idNumber, title, salary};
+  return employee;
 }
 // A 'Submit' button should collect the form information, store the information to 
 // calculate monthly costs, append information to the DOM and clear the input 
