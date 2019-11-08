@@ -68,10 +68,21 @@ function budgetChecker(totals){
 // Combines functionality into the submit button
 function clickSubmit(event){
   event.preventDefault();
-  let newEmployee = getInfo();
-  salaryCollector(newEmployee);
-  pushToTable(newEmployee);
-  totalSalaryCalc();
+  if(
+    $('#first-name-input').val() === '' ||
+    $('#last-name-input').val() === '' ||
+    $('#id-input').val() === '' ||
+    $('#title-input').val() === '' ||
+    $('#salary-input').val() === ''
+  ){
+    $('#error-message').text('Please fill out all forms.');
+  } else{
+    let newEmployee = getInfo();
+    salaryCollector(newEmployee);
+    pushToTable(newEmployee);
+    totalSalaryCalc();
+    $('#error-message').text('');
+  }
 }
 
 // Deletes row that data belongs to
