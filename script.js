@@ -40,8 +40,8 @@ function pushToTable(employee){
       <td>${employee.lName}</td>
       <td>${employee.idNumber}</td>
       <td>${employee.titles}</td>
-      <td>${employee.salary}</td>
-      <button class="delete-button">Delete</button>
+      <td>$${employee.salary}</td>
+      <td><button class="delete-button">Delete</button></td>
     </tr>
   `);
 }
