@@ -1,23 +1,16 @@
 body{
   background-color: gray;
   color: white;
-  max-width: 800px;
+  max-width: 1200px;
   margin:auto;
 }
 header{
   text-align: center;
 }
 
-/* table{
-  width: 800px;
-  border: 1px solid;
+th {
+  background-color:black;
 }
-th{
-  width: 23.75%;
-}
-th.id{
-  width: 5%
-} */
 
 .red{
   background-color: red;
