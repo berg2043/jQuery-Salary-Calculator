@@ -28,8 +28,13 @@ function salaryCollector(employee){
 function pushToTable(employee){
   $('#employee-table').append(`
     <tr>
-      <td>${employee.fName}<td>
-      <td>${employee.lName}<td>
+      <td>${employee.fName}</td>
+      <td>${employee.lName}</td>
+      <td>${employee.idNumber}</td>
+      <td>${employee.titles}</td>
+      <td>${employee.salary}</td>
+      <button class="delete-button">Delete</button>
+    </tr>
   `)
 }
 // A 'Submit' button should collect the form information, store the information to 
