@@ -9,17 +9,28 @@ function getInfo(){
   let fName = $('#first-name-input').val();
   let lName =$('#last-name-input').val();
   let idNumber = $('#id-input').val();
-  let title = $('#title-input').val();
+  let titles = $('#title-input').val();
   let salary = $('#salary-input').val();
-  let employee = {fName, lName, idNumber, title, salary};
+  let employee = {fName, lName, idNumber, titles, salary};
   return employee;
 }
 
+// Adds salary info the list
 function salaryCollector(employee){
   employeeList.push({
-    employee.name,
-    employee.salary
+    fName: employee.fName,
+    lName: employee.lName,
+    salary: employee.salary
   })
+}
+
+// Pushed data to table
+function pushToTable(employee){
+  $('#employee-table').append(`
+    <tr>
+      <td>${employee.fName}<td>
+      <td>${employee.lName}<td>
+  `)
 }
 // A 'Submit' button should collect the form information, store the information to 
 // calculate monthly costs, append information to the DOM and clear the input 
