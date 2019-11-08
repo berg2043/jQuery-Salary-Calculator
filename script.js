@@ -1,8 +1,12 @@
 $(onReady);
 
+// Jquery start function
 function onReady(){
-  console.log('JQ');
+  $('#submit-button').on('click', clickSubmit);
 }
+
+// Declaring the list
+let employeeList=[];
 
 // Gets the form info and clears the forms
 function getInfo(){
@@ -40,7 +44,14 @@ function pushToTable(employee){
       <td>${employee.salary}</td>
       <button class="delete-button">Delete</button>
     </tr>
-  `)
+  `);
+}
+
+// Combines functionality into the submit button
+function clickSubmit(){
+  let newEmployee = getInfo();
+  salaryCollector(newEmployee);
+  pushToTable(newEmployee);
 }
 // A 'Submit' button should collect the form information, store the information to 
 // calculate monthly costs, append information to the DOM and clear the input 
