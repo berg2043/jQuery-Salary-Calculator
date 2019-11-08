@@ -27,8 +27,7 @@ function getInfo(){
 // Adds salary info the list
 function salaryCollector(employee){
   employeeList.push({
-    fName: employee.fName,
-    lName: employee.lName,
+    idNumber: employee.idNumber,
     salary: employee.salary
   })
 }
