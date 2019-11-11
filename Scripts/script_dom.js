@@ -20,7 +20,7 @@ function getInfo(){
 
 // Pushed data to table
 function pushToTable(employee){
-  $('#employee-table').append(`
+  let tableRow = $(
     <tr>
       <td>${employee.fName}</td>
       <td>${employee.lName}</td>
@@ -29,7 +29,8 @@ function pushToTable(employee){
       <td class="salary">$${employee.salary}</td>
       <td><button class="delete-button btn btn-light">Delete</button></td>
     </tr>
-  `);
+  )
+  $(#'employee-table').append(tableRow);
 }
 
 // Updates salary
