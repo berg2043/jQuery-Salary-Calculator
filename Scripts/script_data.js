@@ -38,7 +38,7 @@ function pushToTable(employee){
       <td><button class="delete-button btn btn-light">Delete</button></td>
     </tr>
   )
-  $(#'employee-table').append(tableRow);
+  $('#employee-table').append(tableRow);
 }
 
 // Updates salary
