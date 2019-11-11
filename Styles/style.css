@@ -13,6 +13,11 @@ th {
   background-color:black;
 }
 
+.delete-header{
+  min-width: 95px;
+  max-width: 95px;
+}
+
 .red{
   background-color: red;
 }
