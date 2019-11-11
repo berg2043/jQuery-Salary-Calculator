@@ -53,8 +53,9 @@ function totalSalaryCalc(){
   for(let employee of employeeList){
     totalSalary += Number(employee.salary);
   }
-  $('#total').text(totalSalary);
-  budgetChecker(totalSalary);
+  monthlySalary = (totalSalary/12).toFixed(2);
+  $('#total').text(monthlySalary);
+  budgetChecker(monthlySalary);
 }
 
 // Checks to make sure sum is below $20k and highlights total if above $20k
