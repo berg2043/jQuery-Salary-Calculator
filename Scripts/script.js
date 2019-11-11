@@ -31,7 +31,7 @@ function salaryCollector(employee){
 
 // Pushed data to table
 function pushToTable(employee){
-  let tableRow = $(
+  let tableRow = $(`
     <tr>
       <td>${employee.fName}</td>
       <td>${employee.lName}</td>
@@ -40,7 +40,7 @@ function pushToTable(employee){
       <td>$${employee.salary}</td>
       <td><button class="delete-button btn btn-light">Delete</button></td>
     </tr>
-  )
+  `)
   $('#employee-table').append(tableRow);
 }
 
@@ -50,7 +50,7 @@ function totalSalaryCalc(){
   for(let employee of employeeList){
     totalSalary += Number(employee.salary);
   }
-  monthlySalary = (totalSalary/12).toFixed(2);
+  let monthlySalary = Number((totalSalary/12).toFixed(2)).toLocaleString();
   $('#total').text(monthlySalary);
   budgetChecker(monthlySalary);
 }

@@ -47,7 +47,7 @@ function totalSalaryCalc(){
   for(let employee in $('#employee-table').data()){
     totalSalary += Number($('#employee-table').data(employee));
   }
-  monthlySalary = (totalSalary/12).toFixed(2);
+  let monthlySalary = Number((totalSalary/12).toFixed(2)).toLocaleString();
   $('#total').text(monthlySalary);
   budgetChecker(monthlySalary);
 }

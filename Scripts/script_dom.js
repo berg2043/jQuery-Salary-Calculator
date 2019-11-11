@@ -39,7 +39,7 @@ function totalSalaryCalc(){
   $('.salary').each(function(){
     totalSalary += (Number($(this).text().replace('$','')));
   })
-  monthlySalary = (totalSalary/12).toFixed(2);
+  let monthlySalary = Number((totalSalary/12).toFixed(2)).toLocaleString();
   $('#total').text(monthlySalary);
   budgetChecker(monthlySalary);
 }
