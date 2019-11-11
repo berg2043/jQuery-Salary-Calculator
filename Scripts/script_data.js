@@ -13,11 +13,7 @@ function getInfo(){
   let idNumber = $('#id-input').val();
   let titles = $('#title-input').val();
   let salary = $('#salary-input').val();
-  $('#first-name-input').val('');
-  $('#last-name-input').val('');
-  $('#id-input').val('');
-  $('#title-input').val('');
-  $('#salary-input').val('');
+  $('.employee-input').val('');
   let employee = {fName, lName, idNumber, titles, salary};
   return employee;
 }
