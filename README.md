@@ -1,9 +1,26 @@
-# Project Name
+# Movie List
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+## Descriptipon
+_Durration: 24 hours_
 
-## Description
+This is a simple single page app that takes employee data and calculates a
+total monthly cost.  If it exceeds $20,000, users are alerted.
 
-Your project description goes here. What problem did you solve? How did you solve it?
+## Prerequisites
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/github-finalization-assignment).
+* A web browser
+
+## Usage
+
+Input the employee data and click add-employee.
+
+Added employees can be deleted from the table with the delete button.
+
+## Built With
+
+Javascript
+* jQuery
+
+## Support
+
+This was created as an assignment and is thus unsupported.
